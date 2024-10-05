@@ -6,7 +6,7 @@ Este é o meu portfólio, desenvolvido como parte do curso **Oracle ONE** (Oracl
 
 Você pode visualizar o portfólio completo acessando o link abaixo:
 
-[Visualizar Portfólio](#) <!-- Coloque o link do seu portfólio aqui -->
+[Visualizar Portfólio](https://diogowi.github.io/Challenge-Portfolio/)
 
 ## 🚀 Tecnologias Utilizadas
 
