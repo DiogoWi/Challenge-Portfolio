@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap');
+
+:root {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.6rem;
+    color: #464646;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 1440px;
+    margin: auto;
+    background-color: #EDEDED;
+}
+
+/* Cabeçalho */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 152px;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(5px);
+    background-color: rgba(237, 237, 237, 0.6);
+    z-index: 100;
+
+    & div {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    & ul {
+        display: flex;
+        list-style: none;
+        gap: 32px;
+        font-weight: 500;
+    }
+
+    & li {
+        display: flex;
+        align-items: center;
+    }
+
+    & li > a {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding-block: 3px;
+        text-decoration: none;
+    }
+
+    & li > a::after {
+        content: "";
+        position: absolute;
+        display: flex;
+        height: 1px;
+        width: 0;
+        background-color: #464646;
+        bottom: 0;
+        left: 50%;
+        transition: all .3s;
+    }
+
+    & li > a:hover::after {
+        width: 100%;
+        left: 0;
+    }
+}
+
+/* Main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-block: 32px;
+
+    & > section {
+        padding-inline: 152px;
+    }
+}
+
+#principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & div {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    & h1 {
+        font-size: 5.2rem;
+    }
+
+    & p {
+        font-size: 2.2rem;
+    }
+
+    & ul {
+        display: flex;
+        list-style: none;
+        gap: 32px;
+        font-weight: 500;
+    }
+
+    & li {
+        height: 24px;
+    }
+
+    & a {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: inherit;
+        gap: 4px;
+    }
+
+    & a::after {
+        display: flex;
+        align-items: center;
+        content: url(img/link.svg);
+        font-family: "Material Symbols Outlined";
+        height: 100%;
+    }
+
+    & img {
+        width: 368px;
+        height: 368px;
+        border-radius: 50%;
+    }
+}
+
+#sobre_mim {
+    display: flex;
+    flex-direction: column;
+    background-color: #EAF2FD;
+    padding-block: 64px;
+    gap: 16px;
+
+    & h2 {
+        font-size: 3.2rem;
+    }
+}
+
+#skills_hobbies {
+    display: flex;
+    flex-direction: column;
+    gap: 88px;
+
+    & h2 {
+        font-size: 3.2rem;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    & .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    & .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 8px;
+        background-color: white;
+        width: 175px;
+        height: 175px;
+        padding: 16px;
+
+        & > img {
+            width: 30px;
+        }
+    }
+    
+    & strong {
+        font-size: 1.6rem;
+    }
+
+    & > #skills{
+        /* mysql */
+        & .card:nth-child(6) > img {
+            width: 50px;
+        }
+    }
+}
+
+#formacao_academica {
+    background-color: #EAF2FD;
+    padding-block: 82px;
+
+    & > h2 {
+        font-size: 3.2rem;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    & > #formacoes {
+        display: flex;
+        gap: 16px;
+    }
+
+    & .formacao {
+        width: 368px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    & .formacao > img {
+        width: 100%;
+        aspect-ratio: 2/1.3;
+        object-fit: contain;
+    }
+
+    & .formacao > h3 {
+        font-size: 2.2rem;
+    }
+
+    & .formacao > p {
+        font-weight: 500;
+    }
+}
+
+#experiencias {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+    & > h2 {
+        font-size: 3.6rem;
+        text-align: center;
+        margin-bottom: -48px;
+    }
+
+    & > .experiencia {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    & > .experiencia:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+
+    & > .experiencia > img {
+        width: 67%;
+        object-fit: contain;
+    }
+
+    & > .experiencia > div {
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    & > .experiencia h3 {
+        font-size: 2.2rem;
+    }
+
+    & > .experiencia p {
+        font-weight: 500;
+    }
+
+    & .botoes {
+        display: flex;
+        gap: 16px;
+    }
+
+    & .botoes > a {
+        display: inline-block;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    & .botoes > a:nth-child(1) {
+        border: 1px solid #2A7AE4;
+        color: #2A7AE4;
+        transition: all .3s;
+    }
+
+    & .botoes > a:nth-child(1):hover {
+        background-color: #D4E4FA;
+    }
+
+    & .botoes > a:nth-child(2) {
+        background-color: #2A7AE4;
+        color: white;
+        transition: all .3s;
+    }
+
+    & .botoes > a:nth-child(2):hover {
+        background-color: #5595E9;
+    }
+}
+
+#contato {
+    background-color: #EAF2FD;
+    padding: 64px 152px;
+    display: flex;
+    gap: 16px;
+
+    & > img {
+        width: 45%;
+        object-fit: cover;
+    }
+
+    & h3 {
+        font-size: 3.2rem;
+        margin-bottom: 8px;
+    }
+
+    & p {
+        font-weight: 500;
+        margin-bottom: 32px;
+    }
+
+    & form {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    & form > div {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        background-color: white;
+        height: 56px;
+        border-radius: 4px;
+    }
+    
+    & form :where(input, textarea) {
+        height: 100%;
+        border: none;
+        outline: none;
+        padding-inline: 16px;
+        border-radius: 4px;
+        border-bottom: 1px solid #C8C8C8;
+        resize: none;
+        transition: all .1s;
+    }
+
+    & form input {
+        padding-top: 20px;
+    }
+
+    & form textarea {
+        padding-top: 30px;
+    }
+
+    & form > div:nth-child(4) {
+        height: 130px;
+    }
+
+    & form > div > label {
+        position: absolute;
+        color: #A2A2A2;
+        padding-inline: 16px;
+        top: 19px;
+        width: 100%;
+        transition: all .3s;
+        cursor: text;
+    }
+
+    & form > div :where(input, textarea):focus, .conteudo {
+        border-bottom: 2px solid #2A7AE4;
+    }
+
+    & form > div :where(input, textarea):focus + label, .conteudo + label {
+        font-size: 1.2rem;
+        color: #2A7AE4;
+        top: 8px;
+    }
+
+    & form > button {
+        width: fit-content;
+        padding: 16px;
+        background-color: #2A7AE4;
+        border: none;
+        color: white;
+        cursor: pointer;
+        transition: all .3s;
+    }
+
+    & form > button:hover {
+        background-color: #5595E9;
+    }
+}
+
+#rodape {
+    padding: 32px;
+    text-align: center;
+    background-color: white;
+    font-weight: 500;
+
+    & span {
+        display: block;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 1180px) {
+    header {
+        padding: 32px;
+
+        & li:not(:last-child) {
+            display: none;
+        }
+    }
+
+    main {
+        gap: 0;
+        margin-block: 0;
+
+        & > section {
+            padding: 32px !important;
+        }
+    }
+
+    #principal {
+        & h1 {
+            font-size: 2.2rem;
+        }
+
+        & p {
+            font-size: 1.6rem;
+        }
+
+        & img {
+            width: 146px;
+            height: 146px;
+        }
+    }
+
+    #sobre_min {
+        padding-block: 0;
+        
+        & h2 {
+            font-size: 2.2rem;
+        }
+
+        & p {
+            font-size: 1.4rem;
+        }
+    }
+
+    #skills_hobbies {
+        & h2 {
+            font-size: 2.2rem;
+        }
+
+        & .card {
+            width: 240px;
+            height: 135px;
+        }
+    }
+
+    #formacao_academica {
+        & > h2 {
+            font-size: 2.2rem;
+        }
+    
+        & .formacao > h3 {
+            font-size: 1.6rem;
+        }
+    
+        & .formacao > p {
+            font-weight: 500;
+            font-size: 1.4rem;
+        }
+    }
+
+    #experiencias {
+        & > h2 {
+            font-size: 2.2rem;
+        }
+    
+        & > .experiencia {
+            flex-direction: column !important;
+        }
+    
+        & > .experiencia > img {
+            width: 100%;
+        }
+    
+        & > .experiencia > div {
+            width: 100%;
+        }
+    
+        & > .experiencia h3 {
+            font-size: 1.6rem;
+        }
+    
+        & > .experiencia p {
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+    }
+
+    #contato {
+        padding: 32px;
+        justify-content: center;
+
+        & > img {
+            display: none;
+        }
+    }
+}
+
+/* Celular */
+@media screen and (max-width: 595px) {
+    #principal {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    #skills_hobbies {
+        gap: 32px;
+
+        & .card {
+            width: 170px;
+        }
+    }
+
+    #formacao_academica {
+        & > #formacoes {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
